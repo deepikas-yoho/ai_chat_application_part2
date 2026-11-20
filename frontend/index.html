@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI Chat Application</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h2>AI Chat</h2>
+      <button id="newChat">+ New chat</button>
+      <h3>Sessions</h3><div id="sessions"></div>
+      <div class="settings">
+        <label for="apiKey">App API key</label>
+        <input id="apiKey" type="password" placeholder="Enter API key">
+        <button id="saveKey" class="secondary">Save key</button>
+        <small>Stored in this browser only. Demo default: local-demo-key</small>
+      </div>
+    </aside>
+    <main>
+      <header><h1>AI Assistant</h1><span id="status">Ready</span></header>
+      <section id="messages" aria-live="polite"><div class="welcome">Create a chat and send a message.</div></section>
+      <div id="notice" role="status"></div>
+      <form id="chatForm">
+        <textarea id="messageInput" rows="2" placeholder="Type your message..." required></textarea>
+        <div class="actions"><button id="stopButton" type="button" class="secondary" disabled>Stop generating</button><button id="sendButton" type="submit">Send</button></div>
+      </form>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body></html>
